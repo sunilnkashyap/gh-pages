@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .calculator {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+        .calculator-screen {
+            height: 80px;
+            background-color: #252525;
+            color: white;
+            text-align: right;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            font-size: 2em;
+        }
+        .btn {
+            font-size: 1.5em;
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
-  <h1>GH Pages</h1>
+    <div class="container">
+        <div class="calculator bg-light">
+            <div class="calculator-screen" id="calculator-screen">0</div>
+            <div class="row">
+                <div class="col-3"><button class="btn btn-danger btn-block" data-value="C" onclick="handleClick(this)">C</button></div>
+                <div class="col-3"><button class="btn btn-secondary btn-block" data-value="±" onclick="handleClick(this)">±</button></div>
+                <div class="col-3"><button class="btn btn-secondary btn-block" data-value="%" onclick="handleClick(this)">%</button></div>
+                <div class="col-3"><button class="btn btn-primary btn-block" data-value="/" onclick="handleClick(this)">/</button></div>
+            </div>
+            <div class="row">
+                <div class="col-3"><button class="btn btn-light btn-block" data-value="7" onclick="handleClick(this)">7</button></div>
+                <div class="col-3"><button class="btn btn-light btn-block" data-value="8" onclick="handleClick(this)">8</button></div>
+                <div class="col-3"><button class="btn btn-light btn-block" data-value="9" onclick="handleClick(this)">9</button></div>
+                <div class="col-3"><button class="btn btn-primary btn-block" data-value="*" onclick="handleClick(this)">*</button></div>
+            </div>
+            <div class="row">
+                <div class="col-3"><button class="btn btn-light btn-block" data-value="4" onclick="handleClick(this)">4</button></div>
+                <div class="col-3"><button class="btn btn-light btn-block" data-value="5" onclick="handleClick(this)">5</button></div>
+                <div class="col-3"><button class="btn btn-light btn-block" data-value="6" onclick="handleClick(this)">6</button></div>
+                <div class="col-3"><button class="btn btn-primary btn-block" data-value="-" onclick="handleClick(this)">-</button></div>
+            </div>
+            <div class="row">
+                <div class="col-3"><button class="btn btn-light btn-block" data-value="1" onclick="handleClick(this)">1</button></div>
+                <div class="col-3"><button class="btn btn-light btn-block" data-value="2" onclick="handleClick(this)">2</button></div>
+                <div class="col-3"><button class="btn btn-light btn-block" data-value="3" onclick="handleClick(this)">3</button></div>
+                <div class="col-3"><button class="btn btn-primary btn-block" data-value="+" onclick="handleClick(this)">+</button></div>
+            </div>
+            <div class="row">
+                <div class="col-6"><button class="btn btn-light btn-block" data-value="0" onclick="handleClick(this)">0</button></div>
+                <div class="col-3"><button class="btn btn-light btn-block" data-value="." onclick="handleClick(this)">.</button></div>
+                <div class="col-3"><button class="btn btn-success btn-block" data-value="=" onclick="handleClick(this)">=</button></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./script.js">
+
+    </script>
 </body>
 </html>
